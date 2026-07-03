@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { ArrowUpRight, Github, Linkedin, Twitter } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Twitter, User, Layers, Sparkles, Mail } from "lucide-react";
 import { motion } from "motion/react";
 
 const Petals = () => {
@@ -69,15 +69,7 @@ export default function App() {
           
           {/* Top Left: Logo */}
           <div className="flex flex-col items-start pointer-events-auto">
-            {/* Logo */}
-            <motion.div 
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="w-10 h-10 bg-white/20 backdrop-blur-md rounded-lg flex items-center justify-center border border-white/30 cursor-pointer"
-            >
-              <div className="w-4 h-4 bg-white rounded-sm transform rotate-45"></div>
-            </motion.div>
+            {/* Removed Logo */}
           </div>
 
           {/* Bottom Left: Empty */}
@@ -94,20 +86,24 @@ export default function App() {
             transition={{ duration: 0.8, delay: 0.3, staggerChildren: 0.1 }}
             className="flex flex-wrap justify-end gap-2 sm:gap-4 md:gap-6 text-xs sm:text-sm font-semibold text-gray-800 -mt-2 md:-mt-8 lg:-mt-12 w-full"
           >
-            <a href="#profil" className="relative overflow-hidden px-4 py-2 sm:px-5 sm:py-2.5 bg-black/5 backdrop-blur-xl border border-white/50 shadow-[0_8px_32px_rgba(0,0,0,0.1),inset_0_1px_3px_rgba(255,255,255,1)] rounded-full hover:text-orange-600 hover:bg-orange-500/10 hover:border-orange-500/30 transition-all duration-300 group">
+            <a href="#profil" className="relative overflow-hidden px-4 py-2 sm:px-5 sm:py-2.5 bg-black/5 backdrop-blur-xl border border-white/50 shadow-[0_8px_32px_rgba(0,0,0,0.1),inset_0_1px_3px_rgba(255,255,255,1)] rounded-full hover:text-orange-600 hover:bg-orange-500/10 hover:border-orange-500/30 transition-all duration-300 group flex items-center gap-2">
               <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/60 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+              <User size={16} className="relative z-10" />
               <span className="relative z-10">À propos</span>
             </a>
-            <a href="#projets" className="relative overflow-hidden px-4 py-2 sm:px-5 sm:py-2.5 bg-black/5 backdrop-blur-xl border border-white/50 shadow-[0_8px_32px_rgba(0,0,0,0.1),inset_0_1px_3px_rgba(255,255,255,1)] rounded-full hover:text-orange-600 hover:bg-orange-500/10 hover:border-orange-500/30 transition-all duration-300 group">
+            <a href="#projets" className="relative overflow-hidden px-4 py-2 sm:px-5 sm:py-2.5 bg-black/5 backdrop-blur-xl border border-white/50 shadow-[0_8px_32px_rgba(0,0,0,0.1),inset_0_1px_3px_rgba(255,255,255,1)] rounded-full hover:text-orange-600 hover:bg-orange-500/10 hover:border-orange-500/30 transition-all duration-300 group flex items-center gap-2">
               <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/60 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+              <Layers size={16} className="relative z-10" />
               <span className="relative z-10">Travaux</span>
             </a>
-            <a href="#competences" className="relative overflow-hidden px-4 py-2 sm:px-5 sm:py-2.5 bg-black/5 backdrop-blur-xl border border-white/50 shadow-[0_8px_32px_rgba(0,0,0,0.1),inset_0_1px_3px_rgba(255,255,255,1)] rounded-full hover:text-orange-600 hover:bg-orange-500/10 hover:border-orange-500/30 transition-all duration-300 group">
+            <a href="#competences" className="relative overflow-hidden px-4 py-2 sm:px-5 sm:py-2.5 bg-black/5 backdrop-blur-xl border border-white/50 shadow-[0_8px_32px_rgba(0,0,0,0.1),inset_0_1px_3px_rgba(255,255,255,1)] rounded-full hover:text-orange-600 hover:bg-orange-500/10 hover:border-orange-500/30 transition-all duration-300 group flex items-center gap-2">
               <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/60 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+              <Sparkles size={16} className="relative z-10" />
               <span className="relative z-10">Compétences</span>
             </a>
-            <a href="#contact" className="relative overflow-hidden px-4 py-2 sm:px-5 sm:py-2.5 bg-black/5 backdrop-blur-xl border border-white/50 shadow-[0_8px_32px_rgba(0,0,0,0.1),inset_0_1px_3px_rgba(255,255,255,1)] rounded-full hover:text-orange-600 hover:bg-orange-500/10 hover:border-orange-500/30 transition-all duration-300 group">
+            <a href="#contact" className="relative overflow-hidden px-4 py-2 sm:px-5 sm:py-2.5 bg-black/5 backdrop-blur-xl border border-white/50 shadow-[0_8px_32px_rgba(0,0,0,0.1),inset_0_1px_3px_rgba(255,255,255,1)] rounded-full hover:text-orange-600 hover:bg-orange-500/10 hover:border-orange-500/30 transition-all duration-300 group flex items-center gap-2">
               <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/60 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+              <Mail size={16} className="relative z-10" />
               <span className="relative z-10">Contact</span>
             </a>
           </motion.nav>
