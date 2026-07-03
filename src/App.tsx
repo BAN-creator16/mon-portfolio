@@ -6,6 +6,44 @@
 import { ArrowUpRight, Github, Linkedin, Twitter } from "lucide-react";
 import { motion } from "motion/react";
 
+const Petals = () => {
+  return (
+    <div className="fixed inset-0 pointer-events-none z-10 overflow-hidden">
+      {[...Array(30)].map((_, i) => (
+        <motion.img
+          key={i}
+          src="https://www.image2url.com/r2/default/images/1783108700470-71cc6cd3-87a0-45f4-a2ac-f3d2f1d671c4.png"
+          className="absolute object-contain"
+          style={{
+            width: `${20 + Math.random() * 35}px`,
+            left: `-10vw`,
+            top: `${-20 + Math.random() * 120}vh`,
+            filter: `blur(${Math.random() * 3}px)`,
+          }}
+          initial={{
+            x: 0,
+            y: 0,
+            rotate: Math.random() * 360,
+            opacity: 0,
+          }}
+          animate={{
+            x: `120vw`,
+            y: `${(Math.random() - 0.2) * 100}vh`,
+            rotate: Math.random() * 720,
+            opacity: [0, 0.8, 0.8, 0],
+          }}
+          transition={{
+            duration: 15 + Math.random() * 25,
+            repeat: Infinity,
+            delay: Math.random() * 25,
+            ease: "linear",
+          }}
+        />
+      ))}
+    </div>
+  );
+};
+
 export default function App() {
   const heroImage = "https://www.image2url.com/r2/default/images/1782927206503-1c8f29cc-bc5c-4f6a-9807-97feae8ffd3d.jpg";
 
@@ -19,6 +57,9 @@ export default function App() {
         className="fixed inset-0 bg-cover bg-center pointer-events-none"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
+      
+      {/* Flying Petals Effect */}
+      <Petals />
 
       {/* Content Overlay */}
       <div className="relative z-10 w-full max-w-[1600px] mx-auto min-h-screen flex flex-col md:flex-row">
